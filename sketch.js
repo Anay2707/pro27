@@ -4,6 +4,8 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
+var bobDiameter
+
 function preload()
 {
 	
@@ -16,6 +18,8 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
+
+
 	//Create the Bodies Here.
 
 	bob1 = new Bob(700,100,40);
@@ -24,11 +28,11 @@ function setup() {
 	bob4 = new Bob(460,100,40);
 	bob5 = new Bob(380,100,40);
 	roof = new Roof(400,360,width/2,40);
-	chain1 = new chain(bob1.body,roof.body,-bobDiameter*2,0);
-	chain2 = new chain(bob2.body,roof.body);
-	chain3 = new chain(bob3.body,roof.body);
-	chain4 = new chain(bob4.body,roof.body);
-	chain5 = new chain(bob5.body,roof.body);
+	chain1 = new Chain(bob1.body,roof.body,-bobDiameter*2,0);
+	chain2 = new Chain(bob2.body,roof.body,-bobDiameter*2,0);
+	chain3 = new Chain(bob3.body,roof.body,-bobDiameter*2,0);
+	chain4 = new Chain(bob4.body,roof.body,-bobDiameter*2,0);
+	chain5 = new Chain(bob5.body,roof.body,-bobDiameter*2,0);
 
 
 	Engine.run(engine);
