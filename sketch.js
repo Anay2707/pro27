@@ -4,7 +4,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
-var bobDiameter
+var bobDiameter = 30;
 
 function preload()
 {
